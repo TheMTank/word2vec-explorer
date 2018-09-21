@@ -1,6 +1,6 @@
 # Edits to The Original Repository
 
-This repository is a fork of the original project [dominiek/word2vec-explorer](https://github.com/dominiek/word2vec-explorer). We removed cherrypy and added flask. We also replaced the tsne library with the one provided by the [Scikit-Learn](http://scikit-learn.org/stable/) framework. 
+This repository is a fork of the original project [dominiek/word2vec-explorer](https://github.com/dominiek/word2vec-explorer). We removed the [Cherrypy](https://cherrypy.org/) web framework and added [Flask](flask.pocoo.org/) to the project. We also replaced the [tsne](https://pypi.org/project/tsne/) library we use the t-SNE implementation provided by the [Scikit-Learn](http://scikit-learn.org/stable/) framework. 
 
 The server now accepts in input a general pickled object that contains the embeddings. We also provide a script to convert gensim embeddings to their pickled version.
 
@@ -21,7 +21,7 @@ create a directory to manage converted models
 mkdir model_files
 ```
 
-Run the script that converts embedding models into an object
+Run the script that converts the embedding model into a pickled object
 
 ```python
 python3 convert_gensim_word2vec_model_to_embedding_file.py word2vec_file_path
@@ -30,7 +30,7 @@ python3 convert_gensim_word2vec_model_to_embedding_file.py word2vec_file_path
 ### Run
 
 ```python
-python3 server.py new_embedding_object file
+python3 server.py new_embedding_object_file
 ```
 
 # Word2Vec Explorer (Original guide, for sake of completeness)
