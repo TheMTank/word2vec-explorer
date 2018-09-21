@@ -1,5 +1,39 @@
+# Edits to The Original Repository
 
-# Word2Vec Explorer
+This repository is a fork of the original project [dominiek/word2vec-explorer](https://github.com/dominiek/word2vec-explorer). We removed cherrypy and added flask. We also replaced the tsne library with the one provided by the [Scikit-Learn](http://scikit-learn.org/stable/) framework. 
+
+The server now accepts in input a general pickled object that contains the embeddings. We also provide a script to convert gensim embeddings to their pickled version.
+
+
+### Setup
+
+To install all Python depenencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Convert gensim embeddings to embedding obj
+
+create a directory to manage converted models
+
+```bash
+mkdir model_files
+```
+
+Run the script that converts embedding models into an object
+
+```python
+python3 convert_gensim_word2vec_model_to_embedding_file.py word2vec_file_path
+```
+
+### Run
+
+```python
+python3 server.py new_embedding_object file
+```
+
+# Word2Vec Explorer (Original guide, for sake of completeness)
 
 This tool helps you visualize, query and explore Word2Vec models. Word2Vec is a deep learning technique that feeds massive amounts of text into a shallow neural net which can then be used to solve a variety of NLP and ML problems.
 

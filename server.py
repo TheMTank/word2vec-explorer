@@ -77,7 +77,7 @@ def compare():
 if __name__ == '__main__':
     # python explore.py embeddings_object
     if len(sys.argv) < 2:
-        sys.stderr.write('Usage: {} <Word2Vec model file>\n'.format(sys.argv[0]))
+        sys.stderr.write('Usage: {} <Model file>\n'.format(sys.argv[0]))
         sys.exit()
 
     model = Model(sys.argv[1])
